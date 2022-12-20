@@ -192,7 +192,7 @@ html {
     text-align: center;
     font-size: 1.4em;
     margin-top: 40px;
-    font-weight: 500;
+    font-weight: 450;
 }
 
 #projects {
@@ -361,17 +361,35 @@ html {
         display: block;
         margin: 1rem 1.5rem;
     }
-
-    #main-footer .container {
-        flex-direction: column;
-    }
-
-    #main-footer #creator {
-        margin-top: 1rem;
-    }
-    
     .intro-p, .lead {
         text-align: center;
     }
+
+    .profile-container {
+        margin-top: 8rem;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    #title{
+        font-size: 2rem;
+    }
+
+    #lead {
+        font-size: 1.3rem;
+    }
+
+    #caption {
+        font-size: 2rem;
+    }
     
+    .intro-p {
+        font-size: 1.2rem;
+    }
+
+    .social>div a {
+        font-size: 1rem;
+    }
 }
