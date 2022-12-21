@@ -1,4 +1,7 @@
-// Tooltip
+// Toggle the burger menu dropdown when the burger menu button is clicked
+$('.burger').click(function () {
+  $('.burger-menu').slideToggle();
+});
 
 $('#copy').tooltip({
   trigger: 'click',
@@ -33,7 +36,7 @@ clipboard.on('error', function (e) {
 });
 
 $(window).scroll(function () {
-  if ($(this).scrollTop()  < 400) {
+  if ($(this).scrollTop() < 400) {
     $('.scroll-indicator').hide();
     $('.scroll-indicator').show();
   } else {
