@@ -72,6 +72,8 @@ html {
     height: 350px;
     border: 5px solid var(--primary-color);
     border-radius: 50%;
+    /* unstretches the image*/
+    object-fit: cover;    
 }
 
 
@@ -136,6 +138,8 @@ html {
     font-size: 1rem;
     color: #eee;
     font-weight: 400;
+    text-align: center;
+    
 }
 
 #lead {
