@@ -7,23 +7,46 @@
     <script src="https://kit.fontawesome.com/9650a62e47.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="assets/mainicon.jfif" type="image/jpg" sizes="16x16">
+
+    <!-- Bootstrap-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Clipboard -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
     <title>Zaid Al-Dirbashi</title>
 </head>
 
 <body>
     <!-- PAGE ABOUT -->
     <header id="about">
-        <nav id="navbar" class="py-0">
-            <ul class="nav-e">
-                <li><a class="nav-e" href="#more-about">About</a></li>
-                <li><a class="nav-e" href="#projects">Work</a></li>
-            </ul>
+
+
+
+        <nav id="navbar" class="topnav">
+            <a href="#more-about">About</a>
+            <a href="#projects">Work</a>
+            <!-- Burger menu button -->
+            <div class="burger">
+                <i class="fa fa-bars"></i>
+            </div>
+            <!-- Burger menu dropdown -->
+            <div class="burger-menu">
+                <a href="#more-about">About</a>
+                <a href="#projects">Work</a>
+            </div>
         </nav>
+
+
+
         <div id="welcome-section" class="container">
             <div class="profile-container"><img src="assets/zaid.jpeg" alt="profile-img" class="profile-img"></div>
             <h1 id="title">Zaid Al-Dirbashi</h1>
