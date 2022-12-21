@@ -3,6 +3,11 @@ $('.burger').click(function () {
   $('.burger-menu').slideToggle();
 });
 
+// Close the burger menu when a link in the dropdown is clicked
+$('.burger-menu a').click(function () {
+  $('.burger-menu').slideUp();
+});
+
 $('#copy').tooltip({
   trigger: 'click',
   placement: 'bottom'
