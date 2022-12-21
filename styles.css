@@ -73,7 +73,7 @@ html {
     border: 5px solid var(--primary-color);
     border-radius: 50%;
     /* unstretches the image*/
-    object-fit: cover;    
+    object-fit: cover;
 }
 
 
@@ -139,7 +139,7 @@ html {
     color: #eee;
     font-weight: 400;
     text-align: center;
-    
+
 }
 
 #lead {
@@ -177,6 +177,20 @@ html {
     100% {
         transform: translateY(0);
     }
+}
+
+header {
+    position: relative;
+}
+
+
+#welcome-section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 /* MORE ABOUT ME*/
@@ -365,20 +379,26 @@ html {
         display: block;
         margin: 1rem 1.5rem;
     }
+
     .intro-p, .lead {
         text-align: center;
     }
 
     .profile-container {
-        margin-top: 8rem;
+        margin-top: 4rem;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: 250px;
     }
 
     .scroll-indicator {
         display: none;
     }
 
-    #title{
-        font-size: 2rem;
+    #title {
+        font-size: 2.2rem;
     }
 
     #lead {
@@ -388,7 +408,7 @@ html {
     #caption {
         font-size: 2rem;
     }
-    
+
     .intro-p {
         font-size: 1.2rem;
     }
