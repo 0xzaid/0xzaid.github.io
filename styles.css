@@ -457,6 +457,10 @@ header {
     color: #FFF;
 }
 
+#copy:hover {
+    color:rgba(0, 0, 0, 0.2)
+}
+
 
 
 
