@@ -27,7 +27,8 @@ body {
 
 .wordcounter-img {
     margin: 0;
-    left: 50%;;
+    left: 50%;
+    ;
     transform: translate(50%, 0);
 }
 
@@ -94,7 +95,7 @@ img {
 
 .person__container:hover {
     transform: scale(1.1);
-    
+
 }
 
 .person__circle {
@@ -118,9 +119,8 @@ img {
 }
 
 .person__container:hover .person__img {
-    transform: 
-        scale(1.1) 
-        translateY(-1.5rem);
+    transform:
+        scale(1.1) translateY(-1.5rem);
 }
 
 
@@ -134,13 +134,17 @@ img {
     position: fixed;
     width: 100%;
     height: 70px;
-    background-color: var(--primary-color);
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #80D0C7 0%, #0093E9 100%);
     color: #fff;
     z-index: 99;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+
 
 #navbar a {
     color: #f2f2f2;
@@ -151,6 +155,7 @@ img {
     font-weight: 600;
     line-height: 41px;
     transition: all .5s ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 #navbar a:hover {
@@ -295,11 +300,10 @@ header {
 
 .intro-p a {
     color: #000080
-    
 }
 
 .intro-p a:hover {
-    color:rgba(0, 0, 0, 0.2)
+    color: rgba(0, 0, 0, 0.2)
 }
 
 #projects {
@@ -455,6 +459,7 @@ header {
 
 
 
+
 /* SMARTPHONE */
 @media (max-width: 600px) {
     #navbar a {
@@ -487,7 +492,8 @@ header {
         margin: 1rem 1.5rem;
     }
 
-    .intro-p, .lead {
+    .intro-p,
+    .lead {
         text-align: center;
     }
 
@@ -527,7 +533,7 @@ header {
         margin-right: 20px;
     }
 
-    #more-about p{
+    #more-about p {
         font-size: 1.1rem;
         margin-left: 30px;
         margin-right: 30px;
