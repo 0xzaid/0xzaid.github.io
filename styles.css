@@ -25,9 +25,10 @@ body {
     height: 122%;
 }
 
-img {
-    width: 100%;
-    height: auto;
+.wordcounter-img {
+    margin: 0;
+    left: 50%;;
+    transform: translate(50%, 0);
 }
 
 .box .wordcounter-img {
@@ -67,13 +68,59 @@ html {
     background-color: var(--secondary-color);
 }
 
-.profile-img {
-    width: 350px;
-    height: 350px;
-    border: 5px solid var(--primary-color);
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Profile image animation from: https://www.youtube.com/watch?v=1zDRqHifoX0*/
+.person {
+    --transform-speed: 250ms;
+    position: relative;
+    max-width: 18rem;
+    margin-inline: auto;
+}
+
+.person__container {
+    /* background: pink; */
+    aspect-ratio: 1/1.15;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: transform var(--transform-speed) ease;
+}
+
+.person__container:hover {
+    transform: scale(1.1);
+    
+}
+
+.person__circle {
+    position: absolute;
+    inset: auto 0 0;
+    bottom: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
     border-radius: 50%;
-    /* unstretches the image*/
+    margin-inline: auto;
     object-fit: cover;
+}
+
+.person__img {
+    position: relative;
+    z-index: 2;
+    left: 0.5rem;
+    top: 2rem;
+    transform: scale(1.1);
+    transition: transform var(--transform-speed) ease
+}
+
+.person__container:hover .person__img {
+    transform: 
+        scale(1.1) 
+        translateY(-1.5rem);
 }
 
 
@@ -446,11 +493,11 @@ header {
         text-align: center;
     }
 
-    .profile-container {
+    .person__container {
         margin-top: 4rem;
     }
 
-    .profile-img {
+    .persron__img {
         width: 175px;
         height: 175px;
         object-fit: cover;
