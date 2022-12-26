@@ -458,7 +458,7 @@ header {
 }
 
 #copy:hover {
-    color:rgba(0, 0, 0, 0.2)
+    color: rgba(0, 0, 0, 0.2)
 }
 
 
@@ -511,7 +511,7 @@ header {
         object-fit: cover;
     }
 
-    .scroll-indicator {
+    .scroll-indicator img {
         display: none;
     }
 
