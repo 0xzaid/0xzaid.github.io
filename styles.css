@@ -231,7 +231,7 @@ img {
     font-size: 2rem;
 }
 
-#caption {
+.caption {
     color: rgb(240, 248, 255);
 }
 
@@ -523,7 +523,7 @@ header {
         font-size: 1.3rem;
     }
 
-    #caption {
+    .caption {
         font-size: 2rem;
     }
 
