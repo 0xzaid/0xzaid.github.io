@@ -291,7 +291,8 @@ header {
 }
 
 .intro-p a {
-    color: #000080
+    color: #000080;
+    text-decoration: underline;
 }
 
 .intro-p a:hover {
@@ -402,7 +403,9 @@ header {
 }
 
 #projects .projects .box a p {
-    padding: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0.5rem;
     font-size: 1.4rem;
     font-weight: 700;
     text-align: center;
@@ -510,7 +513,7 @@ header {
 }
 
 /* SMARTPHONE */
-@media (max-width: 600px) {
+@media (max-width: 600px){
     #navbar a {
         display: none;
     }
@@ -591,5 +594,9 @@ header {
         overflow: scroll;
         column-gap: 10px;
         column-count: 2;
+    }
+
+    #projects .projects .box a p {
+        font-size: 1.2rem;
     }
 }
