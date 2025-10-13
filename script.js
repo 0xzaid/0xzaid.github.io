@@ -1,51 +1,76 @@
-// Toggle the burger menu dropdown when the burger menu button is clicked
-$('.burger').click(function () {
-  $('.burger-menu').slideToggle();
+// Initialize Locomotive Smooth Scroll
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#smooth-content'),
+    smooth: true,
+    smoothMobile: false,
+    multiplier: 0.8,
+    lerp: 0.08,
+    class: 'is-inview',
+    scrollbarClass: 'c-scrollbar',
+    scrollbarContainer: false,
+    getDirection: true,
+    getSpeed: true,
+    reloadOnContextChange: true
 });
 
-// Close the burger menu when a link in the dropdown is clicked
-$('.burger-menu a').click(function () {
-  $('.burger-menu').slideUp();
-});
+// Smooth scroll reveal effect
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section');
 
-$('#copy').tooltip({
-  trigger: 'click',
-  placement: 'bottom'
-});
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+    };
 
-function setTooltip(message) {
-  $('#copy').tooltip('hide')
-    .attr('data-original-title', message)
-    .tooltip('show');
-}
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
 
-function hideTooltip() {
-  setTimeout(function () {
-    $('#copy').tooltip('hide');
-  }, 1000);
-}
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 
-// Clipboard
-var clipboard = new ClipboardJS('#copy');
+    // Update locomotive scroll after images load
+    scroll.update();
 
-clipboard.on('success', function (e) {
-  setTooltip('Copied!');
-  hideTooltip();
+    // Glitch effect on link hover
+    const links = document.querySelectorAll('a');
+    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
 
-});
+    links.forEach(link => {
+        link.dataset.originalText = link.textContent;
 
-clipboard.on('error', function (e) {
-  setTooltip('Failed!');
-  hideTooltip();
+        link.addEventListener('mouseenter', function() {
+            let iterations = 0;
+            const originalText = this.dataset.originalText;
+            const maxIterations = 8;
 
-});
+            const interval = setInterval(() => {
+                this.textContent = originalText
+                    .split('')
+                    .map((char, index) => {
+                        if (index < iterations || char === ' ') {
+                            return originalText[index];
+                        }
+                        // Randomly glitch 1-2 characters
+                        if (Math.random() > 0.7) {
+                            return characters[Math.floor(Math.random() * characters.length)];
+                        }
+                        return originalText[index];
+                    })
+                    .join('');
 
-$(window).scroll(function () {
-  if ($(this).scrollTop() < 400) {
-    $('.scroll-indicator').hide();
-    $('.scroll-indicator').show();
-  } else {
-    $('.scroll-indicator').show();
-    $('.scroll-indicator').hide();
-  }
+                iterations += 1;
+
+                if (iterations > maxIterations) {
+                    clearInterval(interval);
+                    this.textContent = originalText;
+                }
+            }, 40);
+        });
+    });
 });

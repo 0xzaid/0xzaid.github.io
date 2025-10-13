@@ -1,306 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This website is my personal
-            portfolio.">
-        <script src="https://kit.fontawesome.com/e9cc43ad49.js"
-            crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="icon" href="assets/mainicon.jfif" type="image/jpg"
-            sizes="16x16">
-
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <title>Zaid Al-Dirbashi</title>
-    </head>
-
-    <body>
-        <!-- PAGE ABOUT -->
-        <header id="about">
-            <nav id="navbar" class="topnav">
-                <a href="#skills"><i class="fa fa-code" aria-hidden="true"></i> Skills</a>
-                <a href="#projects"><i class="fa-sharp fa-solid fa-briefcase"></i> Work</a>
-                <a href="#more-about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
-
-                <!-- Burger menu button -->
-                <div class="burger">
-                    <i class="fa fa-bars"></i>
-                </div>
-                <!-- Burger menu dropdown -->
-                <div class="burger-menu">
-                    <a href="#more-about">About</a>
-                    <a href="#projects">Work</a>
-                    <a href="#skills">Skills</a>
-                </div>
-            </nav>
-
-            <div id="welcome-section" class="container">
-                <div class="person">
-                    <div class="person__container">
-                        <img class="person__circle"
-                            src="assets/pexels-dlkr-5676485.jpg" alt="">
-                        <img class="person__img"
-                            src="assets/zaid_transparent.png" alt="profile-img">
-                    </div>
-                </div>
-                <h1 id="title">Zaid Al-Dirbashi</h1>
-                <p id="lead" class="lead">Computer Science Student, Aspiring
-                    Software Engineer, and Avid Learner</p>
-            </div>
-
-            <div class="scroll-indicator" id="scroll-indicator">
-                <a href="#more-about"><span><img
-                            src="assets/icons8-chevron-down-100.png"
-                            alt="scroll-down"></span></a>
-            </div>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zaid al-dirbashi</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="smooth-wrapper">
+    <div id="smooth-content">
+    <div class="container">
+        <!-- Header Section -->
+        <header class="section">
+            <h1>zaid</h1>
+            <p class="subtitle">cloud automation engineer & occasional web developer</p>
         </header>
 
-        <!-- MORE ABOUT ME SECTION -->
-        <section id="more-about">
-            <div class="introduction">
-                <h1 class="caption">Hi, I'm Zaid!<span>&#128075;&#127995;</span></h1><br>
-                <div class="intro-p">
-                    <p>I'm a student at Monash University Malaysia, studying
-                        Computer Science. I am enthusiastic about
-                        creating
-                        meaningful and influential online experiences.</p>
-                    <p>Feel free to view my <a target="_blank" title="Zaid
-                            Al-Dirbashi Resume"
-                            href="assets/resume.pdf">resume</a> or
-                        reach out through any of the platforms
-                        below
-                        or view my resume. I'd love to get in
-                        touch!</p><br>
-                    <div class="social">
-                        <div>
-                            <a target="_blank"
-                                href="https://www.github.com/0xzaid">
-                                <i class="fab fa-github fa-1x"></i>
-                                Github
-                            </a>
-                            <a target="_blank"
-                                href="https://www.linkedin.com/in/zaid-al-dirbashi/">
-                                <i class="fa-brands fa-linkedin"></i>
-                                Linkedin
-                            </a>
-                            <a target="_blank"
-                                title="Zaid Al-Dirbashi Resume"
-                                href="assets/resume.pdf"><i
-                                    class="fab fa-black-tie fa-1x"></i>
-                                Resume
-                            </a>
-                            <a href="mailto:zaid.aldirbashi@gmail.com">
-                                <i class="fas fa-envelope-open-text fa-1x"></i>
-                                Mail
-                            </a>
-                            <a onclick="copyDivToClipboard()" id="copy"
-                                class="phone"
-                                data-clipboard-text="+60176260071">
-                                <i class="fas fa-phone fa-1x"></i> Mobile
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Hey Section -->
+        <section class="section">
+            <h2>yo</h2>
+            <p>
+                i'm a 24 year old cloud automation engineer from jordan, based in amman.
+            </p>
+            <p>
+                studied compsci at monash university.
+            </p>
+            <p>
+                i love tinkering with tech and exploring apis.
+            </p>
+            <p>
+                if it can be automated, it should be. i'd rather spend 10 hours scripting than 10 minutes doing it manually.
+            </p>
+        </section>
+
+        <!-- Lately Section -->
+        <section class="section">
+            <h2>lately</h2>
+            <ul>
+                <li>exploring 3cx voip api</li>
+                <li>trying to read</li>
+                <li>trying to meet my daily protein intake</li>
+                <li>forcing myself to be an early bird (reformed night owl)</li>
+            </ul>
+        </section>
+
+        <!-- Work Section -->
+        <section class="section">
+            <h2>work</h2>
+            <ul>
+                <li>azure cloud infrastructure</li>
+                <li>python & powershell automation</li>
+                <li>rest apis</li>
+                <li>infrastructure as code</li>
+                <li>ci/cd pipelines</li>
+                <li>container orchestration</li>
+            </ul>
+        </section>
+
+        <!-- Setup Section -->
+        <section class="section">
+            <h2>setup</h2>
+            <ul>
+                <li>vscode</li>
+                <li>windows terminal</li>
+                <li>claude code</li>
+                <li>custom powershell prompt (<a href="https://ohmyposh.dev/" target="_blank">oh my posh</a>)</li>
+                <li><a href="https://github.com/glzr-io/glazewm" target="_blank">glazewm</a>, zebar & <a href="https://translucenttb.com/" target="_blank">translucenttb</a></li>
+            </ul>
+            <p>
+                obsessed with shortcuts and efficiency. always looking for ways to do things in fewer keystrokes.
+            </p>
+        </section>
+
+        <!-- Play Section -->
+        <section class="section">
+            <h2>play</h2>
+            <ul>
+                <li>gym sessions</li>
+                <li>competitive fps games like overwatch or apex legends</li>
+                <li>iced coffee enjoyer</li>
+            </ul>
+        </section>
+
+        <!-- Music Section -->
+        <section class="section">
+            <h2>music</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=wRTQEpfQY5w&list=RDwRTQEpfQY5w&start_radio=1" target="_blank">three days grace - deathwish</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dMHhiMxGLU0&list=RDdMHhiMxGLU0&start_radio=1" target="_blank">five finger death punch - far from home</a></li>
+                <li><a href="https://www.youtube.com/watch?v=D7F42F_JM3U&list=RDD7F42F_JM3U&start_radio=1" target="_blank">lil uzi - chill bae</a></li>
+                <li><a href="https://youtu.be/onP2eoO7byc?list=RDonP2eoO7byc" target="_blank">future - cinderella</a></li>
+                <li><a href="https://youtu.be/3-D4X8F9kEA?list=RD3-D4X8F9kEA" target="_blank">drab majesty - cold souls</a></li>
+                <li><a href="https://youtu.be/4gK3FTGn5Yg?list=RDWghmusb9azs" target="_blank">pozer - aquatic</a></li>
+            </ul>
+        </section>
+
+        <!-- Build Section -->
+        <section class="section">
+            <h2>build</h2>
+            <div class="project">
+                <h3>coming soon...</h3>
+                <p>building something interesting.</p>
             </div>
         </section>
 
-        <!-- SKILLS SECTION -->
-        <section class="skills" id="skills">
-            <h1 class="caption">Skills</h1>
-            <div id="bottom-line"></div>
-            <div class="skills-wrapper">
-                <div class="skills-container">
-                    <img
-                    src="assets/icons8-html-5.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    <img
-                    src="assets/icons8-css3.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    <img
-                    src="assets/javascript-svgrepo-com.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    </div>
-                </div>
-                <div class="skills-container">
-                    <img
-                    src="assets/git-icon-svgrepo-com.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    <img
-                    src="assets/react-logo-svgrepo-com.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    <img
-                    src="assets/icons8-bootstrap.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    </div>
-                </div>
-                <div class="skills-container">
-                    <img
-                    src="assets/python-svgrepo-com.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    <img
-                    src="assets/icons8-java.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    <img
-                    src="assets/icons8-ruby-programming-language.svg"
-                    alt=""
-                    loading="lazy"
-                    class="icon icon-card"
-                    />
-                    </div>
-                </div>
+        <!-- Links Section -->
+        <section class="section">
+            <h2>links</h2>
+            <ul class="social-links">
+                <li><a href="https://github.com/0xzaid" target="_blank">github</a></li>
+                <li><a href="https://www.linkedin.com/in/zaid-al-dirbashi/" target="_blank">linkedin</a></li>
+                <li><a href="mailto:zaid.aldirbashi@gmail.com">email</a></li>
+            </ul>
         </section>
 
-        <!-- PROJECT SECTION -->
-        <section id="projects">
-            <div class="project-tile">
-                <h1 class="caption">My recent projects</h1><br>
-                <div id="bottom-line"></div>
-                <div class="projects">
-                    <div class="box">
-                        <a target="_blank"
-                            href="https://0xzaid.github.io/Frogger/">
-                            <img src="assets/frogger.gif"
-                                alt="project-img"
-                                class="project-img">
-                            <p>
-                                <span class="code">&lt;</span>
-                                Frogger game
-                                <span class="code">/&gt;</span>
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="box">
-                        <a target="_blank"
-                            href="https://0xzaid.github.io/retro-todo/"
-                            class="project-img">
-                            <img src="assets/retro-todo.gif"
-                                alt="project-img"
-                                class="project-img">
-                            <p>
-                                <span class="code">&lt;</span>
-                                Retro to-do list
-                                <span class="code">/&gt;</span>
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="box">
-                        <a target="_blank"
-                            href="https://github.com/0xzaid/word-counter-gui">
-                            <img src="assets/wc2.png" width="10"
-                                alt="project-img"
-                                class="wordcounter-img" />
-                            <p>
-                                <span class="code">&lt;</span>
-                                Word counter GUI
-                                <span class="code">/&gt;</span>
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="box">
-                        <a target="_blank"
-                            href="https://github.com/0xzaid/0xzaid.github.io">
-                            <img src="assets/portfolio.gif"
-                                alt="project-img"
-                                class="project-img" />
-                            <p>
-                                <span class="code">&lt;</span>
-                                Personal Portfolio
-                                <span class="code">/&gt;</span>
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="box">
-                        <a target="_blank"
-                            href="https://0xzaid.github.io/FCC-Front-End-Libraries/random-quote-generator/">
-                            <img src="assets/quote-generator.gif"
-                                alt="project-img"
-                                class="project-img" />
-                            <p>
-                                <span class="code">&lt;</span>
-                                Quote generator
-                                <span class="code">/&gt;</span>
-                            </p>
-                        </a>
-                    </div>
-
-
-                    <div class="box">
-                        <a target="_blank"
-                            href="https://0xzaid.github.io/web-design-projects/documentation-page/index.html">
-                            <img src="assets/documentation.png"
-                                alt="project-img"
-                                class="project-img" />
-                            <p>
-                                <span class="code">&lt;</span>
-                                Documentation page
-                                <span class="code">/&gt;</span>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <a href="https://github.com/0xzaid" target="_blank"
-                    class="btn1">Show More</a>
-            </div>
-        </section>
-
-
-
-        <!-- FOOTER SECTION -->
-        <footer id="main-footer">
-            <div class="container">
-                <p id="creator">Created with
-                    <span class="heart">♥</span> by <a
-                        href="https://github.com/0xzaid/"
-                        target="_blank">0xzaid</a>
-                </p>
-            </div>
+        <!-- Footer -->
+        <footer class="section">
+            <p>&copy; 2025 zaid</p>
         </footer>
-        <script src="script.js"></script>
-    </body>
+    </div>
+    </div>
+    </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
