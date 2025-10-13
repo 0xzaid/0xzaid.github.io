@@ -184,6 +184,27 @@ h1 {
     font-weight: 300;
 }
 
+/* Typing Animation */
+#typing-name {
+    display: inline-block;
+}
+
+.typing-cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+    color: #66CDAA;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
 /* Headings */
 h2 {
     font-size: 1.5rem;

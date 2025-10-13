@@ -56,8 +56,120 @@ function applyMouseRepel(letter) {
     }
 }
 
+// Prevent scroll restoration on page load
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 // Initialize effects
 document.addEventListener('DOMContentLoaded', () => {
+    // Force scroll to top on load
+    window.scrollTo(0, 0);
+
+    // Typing animation for name with misspellings
+    const typingElement = document.getElementById('typing-name');
+    const correctName = 'zaid al-dirbashi';
+
+    let currentText = '';
+    let isTyping = true;
+    let charIndex = 0;
+    let shouldMisspell = false;
+    let errorDetected = false;
+    let errorPosition = -1;
+
+    // More typo variations
+    function getTypoVersion() {
+        const typoTypes = [
+            { pos: 2, char: 'y' },   // zayd
+            { pos: 3, char: 'e' },   // zaied
+            { pos: 1, char: 'i' },   // ziaid
+            { pos: 0, char: 's' },   // said
+            { pos: 8, char: 'u' },   // zaid al-durbashi
+            { pos: 9, char: 'e' },   // zaid al-derbashi
+            { pos: 11, char: 'i' },  // zaid al-diibashi
+            { pos: 12, char: 'e' },  // zaid al-direbashi
+            { pos: 13, char: 'p' },  // zaid al-dirpashi
+            { pos: 14, char: 'e' },  // zaid al-dirbeashi
+            { pos: 15, char: 'a' },  // zaid al-dirbashi
+            { pos: 4, char: 'd' },   // zaiddaldirbashi
+        ];
+        return typoTypes[Math.floor(Math.random() * typoTypes.length)];
+    }
+
+    let currentTypo = null;
+    let attempts = 0;
+
+    function type() {
+        // Decide if we should misspell on this attempt
+        if (charIndex === 0 && isTyping) {
+            attempts++;
+            // 50% chance of error
+            shouldMisspell = Math.random() < 0.5;
+            errorDetected = false;
+            errorPosition = -1;
+            currentText = ''; // Reset text
+
+            if (shouldMisspell) {
+                currentTypo = getTypoVersion();
+            } else {
+                currentTypo = null;
+            }
+        }
+
+        if (isTyping) {
+            // Typing forward
+            if (charIndex < correctName.length) {
+                let charToType;
+
+                // Check if we should introduce an error at this position
+                if (shouldMisspell && currentTypo && charIndex === currentTypo.pos && !errorDetected) {
+                    charToType = currentTypo.char;
+                    errorDetected = true;
+                    errorPosition = charIndex;
+                } else {
+                    charToType = correctName[charIndex];
+                }
+
+                currentText += charToType;
+                typingElement.textContent = currentText;
+                charIndex++;
+
+                // If we just typed an error, type ONE more character then start backspacing
+                if (errorDetected && charIndex === errorPosition + 2) {
+                    setTimeout(() => {
+                        isTyping = false;
+                        type();
+                    }, 300);
+                    return; // Important: return here to prevent double setTimeout
+                }
+
+                setTimeout(type, 80 + Math.random() * 40);
+            } else {
+                // Finished typing correctly! Pause longer, then restart
+                setTimeout(() => {
+                    isTyping = false;
+                    type();
+                }, 3000);
+            }
+        } else {
+            // Backspacing
+            if (charIndex > 0) {
+                charIndex--;
+                currentText = currentText.slice(0, -1);
+                typingElement.textContent = currentText;
+                setTimeout(type, 40 + Math.random() * 20);
+            } else {
+                // Finished backspacing, start typing again
+                isTyping = true;
+                currentText = '';
+                setTimeout(type, 300);
+            }
+        }
+    }
+
+    // Start the animation
+    setTimeout(type, 500);
+
     // Initialize chaos text on headings and paragraphs
     const chaosElements = document.querySelectorAll('h2, h3, .subtitle');
     chaosElements.forEach(element => {
