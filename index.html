@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zaid al-dirbashi</title>
+    <title>zaid</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="smooth-wrapper">
-    <div id="smooth-content">
+    <!-- Flashlight Mode Toggle -->
+    <button id="flashlight-toggle" class="flashlight-btn">
+        <span class="flashlight-icon">☾</span>
+    </button>
+
+    <!-- Flashlight Overlay -->
+    <div id="flashlight-overlay" class="flashlight-overlay"></div>
+
     <div class="container">
         <!-- Header Section -->
         <header class="section">
-            <h1>zaid</h1>
+            <h1><img src="favicon.ico" alt="favicon" class="favicon-icon">zaid al-dirbashi</h1>
             <p class="subtitle">cloud automation engineer & occasional web developer</p>
         </header>
 
@@ -124,10 +129,7 @@
             <p>&copy; 2025 zaid</p>
         </footer>
     </div>
-    </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
